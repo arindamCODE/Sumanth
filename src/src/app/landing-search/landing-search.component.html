@@ -1,0 +1,52 @@
+<div style="background:black;bottom: 0;left: 0;position: fixed;right: 0;top:0;color:white;text-transform: uppercase;">
+      <div class="container-fluid" style="width:100%;position: fixed;top:5%;">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-8" style="text-align: center;">
+          <div ><a href="#"><span class="glyphicon glyphicon-log-in"></span> view saved headlines</a></div>
+          </div>
+          <div class="col-sm-1" style="text-align: center;background-color:;">
+          <div ><a href="#" >log in</a></div>
+        </div> 
+        </div> 
+      </div>
+       <div class="container-fluid" style="width:100%;position: fixed;top:40%;">
+        <div class="row">
+          <div class="col-sm-12" id="logo" style="text-align: center;">
+           <ul>
+              <li>n</li>
+              <li style="color:red;font-style: oblique;">e</li>
+              <li>w</li>
+              <li>s</li>
+           </ul>
+          </div>
+        </div> 
+        <div class="row">
+         <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container" style="padding-top: 15px;"> 
+                <div class="input-group stylish-input-group">
+                    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="text" class="form-control"  placeholder="Search For Provider"  >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+                <div>
+    <div *ngFor="let provider of providers | async"
+          (click)="gotoDetail(provider)" class="search-result" >
+      {{provider.name}}
+    </div>
+  </div>
+            </div>
+        </div>
+        </div> 
+      </div>
+      <div class="container-fluid" style="width:100%;position: fixed;bottom:10%;">
+        <div class="row">
+          <div class="col-sm-12"  style="text-align: center;">
+           all rights reserved @Evil Corp.
+          </div>
+        </div> 
+        </div>
+</div>
+
